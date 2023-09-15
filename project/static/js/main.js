@@ -175,6 +175,7 @@ window.addEventListener('scroll', scrollHeader)
 /*=============== SCROLL REVEAL ANIMATION ===============*/
 
 
+
 const sr = ScrollReveal({
     origin: 'top',
     distance: '60px',
@@ -192,7 +193,23 @@ sr.reveal('.qualification__content, .services__card', {interval: 75})
 
 
 /*
-var elementToRemove = document.getElementById("justForBlank");
-console.log(elementToRemove);
-elementToRemove.remove();
+
+function sleepFor(sleepDuration){
+    var now = new Date().getTime();
+    while(new Date().getTime() < now + sleepDuration){ 
+        
+    }
+}
+
+sleepFor(500);
+var elementToModify = document.getElementById("justForBlank");
+
+for (let i = 0 ; i < 1000; i++)
+{
+    elementToModify.style.height = (1000-i)+"px";
+
+    console.log(i);
+}
+
+elementToModify.remove();
 */

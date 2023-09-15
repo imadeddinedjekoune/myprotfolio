@@ -81,9 +81,11 @@
             <!--==================== HOME ====================-->
             <section class="home section" id="home">
             	
-                <div class="home__container container grid section__border">
+                <div id="blankElement" class="home__container container grid section__border" style="
+    margin-top: 1000px;
+">
                     <div class="home__data grid">
-                        <h1 class="home__title">
+                        <h1 class="home__title" >
                             Hi, I'm Chris <br>
                             Frontend Developer <br>
                             Based In Tuavó <br>
@@ -654,5 +656,11 @@
 
         <!--=============== MAIN JS ===============-->
         <script src="{% static 'js/main.js' %}"></script>
+
+
+        <script type="text/javascript">
+        	var elementToModify = document.getElementById("blankElement");
+			elementToModify.style.marginTop = "0px";
+        </script>
     </body>
 </html>
