@@ -174,6 +174,7 @@ window.addEventListener('scroll', scrollHeader)
 
 /*=============== SCROLL REVEAL ANIMATION ===============*/
 
+
 const sr = ScrollReveal({
     origin: 'top',
     distance: '60px',
@@ -188,19 +189,10 @@ sr.reveal(`.skills__content:nth-child(1), contact__content:nth-child(1)`, {origi
 sr.reveal('.skills__content:nth-child(2), contact__content:nth-child(2)', {origin: 'right'})
 sr.reveal('.qualification__content, .services__card', {interval: 75})
 
-function sleep(seconds) {
-  return new Promise((resolve) => {
-    setTimeout(resolve, seconds * 1000);
-  });
-}
 
 
+/*
 var elementToRemove = document.getElementById("justForBlank");
-
-console.log("start");
-// Usage example
-sleep(1).then(() => {
-    elementToRemove.remove();
-    console.log(elementToRemove);
-});
-
+console.log(elementToRemove);
+elementToRemove.remove();
+*/
