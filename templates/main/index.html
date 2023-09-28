@@ -16,12 +16,14 @@
 
         <!--=============== CSS ===============-->
         <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
 
         <title>My Portfolio - Imad Eddine Djekoune</title>
         <meta property="og:title" content="My Awesome Website">
-		<meta property="og:description" content="Explore the awesomeness of my website!">
-		<meta property="og:image" content="{% static 'image/Imad2.png' %}">
-		<meta property="og:url" content="https://www.example.com">
+  <meta property="og:description" content="Explore the awesomeness of my website!">
+  <meta property="og:image" content="{% static 'image/Imad2.png' %}">
+  <meta property="og:url" content="https://www.example.com">
     </head>
     <body>
         <!--==================== HEADER ====================-->
@@ -84,7 +86,7 @@
         <main class="main">
             <!--==================== HOME ====================-->
             <section class="home section" id="home">
-            	
+             
                 <div id="blankElement" class="home__container container grid section__border" style="
     margin-top: 1000px;
 ">
@@ -103,15 +105,26 @@
 
                             <img src="{% static 'image/shape-circle.svg' %}" alt="" class="home__shape-circle">
                         </div>
+                        <div class="home__social">
+                            <button id="show-pdf" class="button-30" role="button">Download CV</button>
+                        </div>
+
+                        <script>
+                            document.getElementById("show-pdf").addEventListener("click", function () {
+                                var pdfUrl = "{% static 'pdf/CV de Imad Eddine Djekoune.pdf' %}";
+                                window.open(pdfUrl, '_blank');
+                            });
+                        </script>
+
                         <ul class="home__social">
-                            <a href="#" target="_blank" class="home__social-link">
+                            <a href="https://www.linkedin.com/in/imad-eddine-djekoune/" target="_blank" class="home__social-link">
                                 <i class="ri-linkedin-box-line"></i>
                             </a>
-                            <a href="#" target="_blank" class="home__social-link">
+                            <a href="https://github.com/imadeddinedjekoune" target="_blank" class="home__social-link">
                                 <i class="ri-github-line"></i>
                             </a>
-                            <a href="#" target="_blank" class="home__social-link">
-                                <i class="ri-dribbble-line"></i>
+                            <a href="https://www.instagram.com/djekouneimad/" target="_blank" class="home__social-link">
+                                <i class="ri-instagram-line"></i>
                             </a>                           
                         </ul>
                     </div>
@@ -123,7 +136,7 @@
                                 BIOGRAPHY
                             </h3>
                             <p class="home__info-description">
-                                Greetings, I'm Chris, a Computer Science enthusiast hailing from Algiers, with a strong focus on the fascinating realms of Computer Vision and AI.
+                                Greetings, I'm Imad, a Computer Science enthusiast hailing from Algiers, with a strong focus on the fascinating realms of Computer Vision and AI.
                                 <br>
                                 <br>
                             </p>
@@ -622,17 +635,18 @@
                 </ul>
 
                 <ul class="footer__social">
-                    <a href="#" target="_blank" class="footer__social-link">
+                    <a href="https://www.linkedin.com/in/imad-eddine-djekoune/" target="_blank" class="footer__social-link">
                         <i class="ri-linkedin-box-line"></i>
                     </a>
 
-                    <a href="#" target="_blank" class="footer__social-link">
+                    <a href="https://github.com/imadeddinedjekoune" target="_blank" class="footer__social-link">
                         <i class="ri-github-line"></i>
                     </a>
 
-                    <a href="#" target="_blank" class="footer__social-link">
-                        <i class="ri-whatsapp-line"></i>
+                    <a href="https://www.instagram.com/djekouneimad/" target="_blank" class="footer__social-link">
+                         <i class="ri-instagram-line"></i>
                     </a>
+
 
                 </ul>
 
@@ -665,8 +679,8 @@
 
 
         <script type="text/javascript">
-        	var elementToModify = document.getElementById("blankElement");
-			elementToModify.style.marginTop = "0px";
+         var elementToModify = document.getElementById("blankElement");
+   elementToModify.style.marginTop = "0px";
         </script>
     </body>
 </html>
