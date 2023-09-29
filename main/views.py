@@ -5,7 +5,13 @@ from .models import Visitors , Emails
 
 def index(request):
 	v = Visitors()
-	v.ip = request.META.get('REMOTE_ADDR')
+	
+	client_ip = request.META.get('HTTP_X_FORWARDED_FOR', None)
+
+	if client_ip is None:
+	    client_ip = request.META.get('REMOTE_ADDR')
+
+	v.ip = client_ip
 	v.info = request.user_agent.os
 	v.save()
 
