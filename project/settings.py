@@ -29,6 +29,7 @@ DEBUG = True
 ALLOWED_HOSTS = ["imadeddine-9d01ff1b3f83.herokuapp.com","127.0.0.1","www.djekouneimad.com","djekouneimad.com"]
 
 
+
 # Application definition
 
 INSTALLED_APPS = [
@@ -137,3 +138,8 @@ DATA_UPLOAD_MAX_NUMBER_FIELDS = 10240
 
 
 USER_AGENTS_CACHE = 'default'
+
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+SECURE_SSL_REDIRECT = True
+SECURE_HSTS_SECONDS = 31536000  # 1 year
+SECURE_HSTS_INCLUDE_SUBDOMAINS = True
